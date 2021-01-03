@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  #应用程序名称
+  application:
+    name: eurake-server
+#eureka配置
+eureka:
+  client:
+    #是否注册自己的信息到eurekaServer，默认是true
+    register-with-eureka: false
+    #是否拉取其他的服务信息，默认是true
+    fetch-registry: false
+    #EurekaServe 的地址，现在是自己的地址，如果是集群的话，需要加上其他Server的地址
+    service-url:
+      defaultZone: http://127.0.0.1:8080/eurake
